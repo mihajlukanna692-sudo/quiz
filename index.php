@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz start</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="form">
     <form action="quiz.php" method="post">
 
-        <label for="username">User name</label>
-        <input type="text" name="username" id="username">
+        <label for="username">Użytkownik</label>
+        <input type="text" name="username" id="username" required>
 
         <br><br>
 

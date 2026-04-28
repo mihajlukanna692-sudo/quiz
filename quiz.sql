@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2026 at 11:06 PM
+-- Generation Time: Apr 28, 2026 at 11:52 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -85,17 +85,38 @@ CREATE TABLE `results` (
   `username` varchar(100) NOT NULL,
   `score` int(11) NOT NULL,
   `total_questions` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `category` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `results`
 --
 
-INSERT INTO `results` (`id`, `username`, `score`, `total_questions`, `created_at`) VALUES
-(1, '', 0, 0, '2026-04-27 20:21:16'),
-(2, 'tymon', 5, 5, '2026-04-27 20:30:46'),
-(3, 'basia', 4, 5, '2026-04-27 20:33:46');
+INSERT INTO `results` (`id`, `username`, `score`, `total_questions`, `created_at`, `category`) VALUES
+(1, '', 0, 0, '2026-04-27 20:21:16', NULL),
+(2, 'tymon', 5, 5, '2026-04-27 20:30:46', NULL),
+(3, 'basia', 4, 5, '2026-04-27 20:33:46', NULL),
+(4, 'kk', 2, 5, '2026-04-28 15:11:02', NULL),
+(5, 'szymon', 5, 5, '2026-04-28 15:17:07', NULL),
+(6, 'tymon', 3, 5, '2026-04-28 19:12:48', 'programowanie'),
+(7, 'Janek', 4, 5, '2026-04-28 19:13:48', 'geografia'),
+(8, 'Janek', 4, 5, '2026-04-28 19:14:25', 'historia'),
+(9, 'Joanna', 4, 5, '2026-04-28 19:19:44', 'programowanie'),
+(10, 'Basia', 5, 5, '2026-04-28 19:23:54', 'geografia'),
+(11, 'Alicja', 5, 5, '2026-04-28 19:35:46', 'programowanie'),
+(12, 'olaf', 0, 0, '2026-04-28 20:06:19', 'geografia'),
+(13, 'Anna', 3, 4, '2026-04-28 20:17:26', 'geografia'),
+(14, 'Pola', 1, 5, '2026-04-28 20:24:27', 'geografia'),
+(15, 'Julia', 3, 5, '2026-04-28 20:44:35', 'geografia'),
+(16, 'Julia', 3, 5, '2026-04-28 20:47:04', 'geografia'),
+(17, 'Julia', 3, 5, '2026-04-28 20:49:28', 'geografia'),
+(18, 'Julia', 3, 5, '2026-04-28 20:50:30', 'geografia'),
+(19, 'kuba', 3, 5, '2026-04-28 20:54:22', 'geografia'),
+(20, 'anna', 5, 5, '2026-04-28 20:58:55', 'programowanie'),
+(21, 'Kamil', 2, 5, '2026-04-28 21:01:27', 'historia'),
+(22, 'ola', 0, 0, '2026-04-28 21:34:10', 'geografia'),
+(23, 'Joanna', 5, 5, '2026-04-28 21:35:08', 'programowanie');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -127,9 +148,10 @@ ALTER TABLE `questions`
 -- AUTO_INCREMENT for table `results`
 --
 ALTER TABLE `results`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+

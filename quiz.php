@@ -16,6 +16,7 @@
     <form action="wynik.php" method="post" id="quizForm">
 
         <div class="questions">
+            <div id="timer">Czas: 10</div>
 
         <?php
         include 'db.php';
@@ -65,11 +66,12 @@
         </div>
 
         <input type="hidden" name="username" value="<?php echo htmlspecialchars($username); ?>">
+        <input type="hidden" name="category" value="<?php echo htmlspecialchars($category); ?>">
 
         <div class="footer">
             <input type="button" id="prevBtn" value="Wstecz">
             <input type="button" id="nextBtn" value="Dalej">
-            <input type="submit" id="submitBtn" value="Zakończ">
+            <input type="button" id="submitBtn" value="Zakończ">
         </div>
 
     </form>

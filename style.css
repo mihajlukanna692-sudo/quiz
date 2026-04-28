@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #f5f6f8;
+}
+
+.quiz-app {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+}
+
+.progress {
+    height: 5px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #2563eb;
+    transition: width 0.3s ease;
+}
+
+.questions {
+    position: relative;
+}
+
+.question {
+    display: none;
+    animation: fade 0.3s ease;
+}
+
+.question.active {
+    display: block;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.question-number {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.answers label {
+    display: block;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    background: white;
+}
+
+.answers label:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input[type="submit"] {
+    background: #2563eb;
+    color: white;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background: #1d4ed8;
+}
+
+.question {
+    display: none;
+}
+
+.question.active {
+    display: block;
+}
